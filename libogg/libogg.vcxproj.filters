@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ogg">
+      <UniqueIdentifier>{ac2f1611-8813-42e2-925c-cee490116fcf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ogg\ogg.h">
+      <Filter>ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="ogg\os_types.h">
+      <Filter>ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="libogg.h" />
+    <ClInclude Include="library.include.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libogg.cpp" />
+  </ItemGroup>
+</Project>

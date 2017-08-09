@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="bitstate.cc" />
+    <ClCompile Include="compile.cc" />
+    <ClCompile Include="dfa.cc" />
+    <ClCompile Include="filtered_re2.cc" />
+    <ClCompile Include="mimics_pcre.cc" />
+    <ClCompile Include="nfa.cc" />
+    <ClCompile Include="onepass.cc" />
+    <ClCompile Include="parse.cc" />
+    <ClCompile Include="perl_groups.cc" />
+    <ClCompile Include="prefilter.cc" />
+    <ClCompile Include="prefilter_tree.cc" />
+    <ClCompile Include="prog.cc" />
+    <ClCompile Include="re2.cc" />
+    <ClCompile Include="regexp.cc" />
+    <ClCompile Include="set.cc" />
+    <ClCompile Include="simplify.cc" />
+    <ClCompile Include="stringpiece.cc" />
+    <ClCompile Include="tostring.cc" />
+    <ClCompile Include="unicode_casefold.cc" />
+    <ClCompile Include="unicode_groups.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="re2.h" />
+    <ClInclude Include="library.include.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="util\benchmark.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\flags.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\logging.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\mix.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\mutex.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\pcre.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\sparse_array.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\sparse_set.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\strutil.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\test.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\utf.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\util.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="bitmap256.h" />
+    <ClInclude Include="filtered_re2.h" />
+    <ClInclude Include="prefilter.h" />
+    <ClInclude Include="prefilter_tree.h" />
+    <ClInclude Include="prog.h" />
+    <ClInclude Include="regexp.h" />
+    <ClInclude Include="set.h" />
+    <ClInclude Include="stringpiece.h" />
+    <ClInclude Include="unicode_casefold.h" />
+    <ClInclude Include="unicode_groups.h" />
+    <ClInclude Include="walker-inl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="util">
+      <UniqueIdentifier>{98a965bf-0ef9-47d4-bf99-22f5284a50f4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

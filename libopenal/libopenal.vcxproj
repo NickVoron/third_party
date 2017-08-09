@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7847ede2-ead3-46ea-a98a-417de2d18ddc}</ProjectGuid>
+    <RootNamespace>libopenalrary</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VS_Props\common_params.props" />
+    <Import Project="..\..\VS_Props\arty_release.props" />
+    <Import Project="..\..\VS_Props\libs_paths.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VS_Props\common_params.props" />
+    <Import Project="..\..\VS_Props\arty_release.props" />
+    <Import Project="..\..\VS_Props\libs_paths.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VS_Props\common_params.props" />
+    <Import Project="..\..\VS_Props\arty_debug.props" />
+    <Import Project="..\..\VS_Props\libs_paths.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VS_Props\common_params.props" />
+    <Import Project="..\..\VS_Props\arty_debug.props" />
+    <Import Project="..\..\VS_Props\libs_paths.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_WIN32;_WIN32_WINNT=0x0501;restrict=;inline=__inline;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;strcasecmp=_stricmp;strncasecmp=_strnicmp;AL_ALEXT_PROTOTYPES;AL_LIBTYPE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(ProjectDir)\src\include\;$(ProjectDir)\src\OpenAL32\Include\;$(ProjectDir)\src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_WIN32;_WIN32_WINNT=0x0501;restrict=;inline=__inline;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;strcasecmp=_stricmp;strncasecmp=_strnicmp;AL_ALEXT_PROTOTYPES;AL_LIBTYPE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(ProjectDir)\src\include\;$(ProjectDir)\src\OpenAL32\Include\;$(ProjectDir)\src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32;restrict=;inline=__inline;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;strcasecmp=_stricmp;strncasecmp=_strnicmp;AL_LIBTYPE_STATIC;AL_ALEXT_PROTOTYPES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles>config/platform.h</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(ProjectDir)\src\include\;$(ProjectDir)\src\OpenAL32\Include\;$(ProjectDir)\src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32;restrict=;inline=__inline;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;strcasecmp=_stricmp;strncasecmp=_strnicmp;AL_LIBTYPE_STATIC;AL_ALEXT_PROTOTYPES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles>config/platform.h</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(ProjectDir)\src\include\;$(ProjectDir)\src\OpenAL32\Include\;$(ProjectDir)\src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="libopenal.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">config/platform.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">config/platform.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">config/platform.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">config/platform.h</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="src\Alc\ALc.c" />
+    <ClCompile Include="src\Alc\alcConfig.c" />
+    <ClCompile Include="src\Alc\alcRing.c" />
+    <ClCompile Include="src\Alc\alcThread.c" />
+    <ClCompile Include="src\Alc\ALu.c" />
+    <ClCompile Include="src\Alc\backends\dsound.c" />
+    <ClCompile Include="src\Alc\backends\loopback.c" />
+    <ClCompile Include="src\Alc\backends\mmdevapi.c" />
+    <ClCompile Include="src\Alc\backends\null.c" />
+    <ClCompile Include="src\Alc\backends\wave.c" />
+    <ClCompile Include="src\Alc\backends\winmm.c" />
+    <ClCompile Include="src\Alc\bs2b.c" />
+    <ClCompile Include="src\Alc\effects\chorus.c" />
+    <ClCompile Include="src\Alc\effects\dedicated.c" />
+    <ClCompile Include="src\Alc\effects\distortion.c" />
+    <ClCompile Include="src\Alc\effects\echo.c" />
+    <ClCompile Include="src\Alc\effects\equalizer.c" />
+    <ClCompile Include="src\Alc\effects\flanger.c" />
+    <ClCompile Include="src\Alc\effects\modulator.c" />
+    <ClCompile Include="src\Alc\effects\nulleff.c" />
+    <ClCompile Include="src\Alc\effects\reverb.c" />
+    <ClCompile Include="src\Alc\helpers.c" />
+    <ClCompile Include="src\Alc\hrtf.c" />
+    <ClCompile Include="src\Alc\mixer.c" />
+    <ClCompile Include="src\Alc\mixer_c.c" />
+    <ClCompile Include="src\Alc\mixer_sse.c" />
+    <ClCompile Include="src\Alc\panning.c" />
+    <ClCompile Include="src\OpenAL32\alAuxEffectSlot.c" />
+    <ClCompile Include="src\OpenAL32\alBuffer.c" />
+    <ClCompile Include="src\OpenAL32\alEffect.c" />
+    <ClCompile Include="src\OpenAL32\alError.c" />
+    <ClCompile Include="src\OpenAL32\alExtension.c" />
+    <ClCompile Include="src\OpenAL32\alFilter.c" />
+    <ClCompile Include="src\OpenAL32\alListener.c" />
+    <ClCompile Include="src\OpenAL32\alSource.c" />
+    <ClCompile Include="src\OpenAL32\alState.c" />
+    <ClCompile Include="src\OpenAL32\alThunk.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libopenal.h" />
+    <ClInclude Include="library.include.h" />
+    <ClInclude Include="src\Alc\mixer_defs.h" />
+    <ClInclude Include="src\config.h" />
+    <ClInclude Include="src\include\AL\al.h" />
+    <ClInclude Include="src\include\AL\alc.h" />
+    <ClInclude Include="src\include\AL\alext.h" />
+    <ClInclude Include="src\include\AL\efx-creative.h" />
+    <ClInclude Include="src\include\AL\efx-presets.h" />
+    <ClInclude Include="src\include\AL\efx.h" />
+    <ClInclude Include="src\OpenAL32\Include\alAuxEffectSlot.h" />
+    <ClInclude Include="src\OpenAL32\Include\alBuffer.h" />
+    <ClInclude Include="src\OpenAL32\Include\alEffect.h" />
+    <ClInclude Include="src\OpenAL32\Include\alError.h" />
+    <ClInclude Include="src\OpenAL32\Include\alFilter.h" />
+    <ClInclude Include="src\OpenAL32\Include\alListener.h" />
+    <ClInclude Include="src\OpenAL32\Include\alMain.h" />
+    <ClInclude Include="src\OpenAL32\Include\alSource.h" />
+    <ClInclude Include="src\OpenAL32\Include\alThunk.h" />
+    <ClInclude Include="src\OpenAL32\Include\alu.h" />
+    <ClInclude Include="src\OpenAL32\Include\bs2b.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Alc\hrtf_tables.inc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

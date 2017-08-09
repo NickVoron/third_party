@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{50ff9a8a-14f6-4ef0-9c8e-0947718f99bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\x86_vc">
+      <UniqueIdentifier>{c1909e77-5a7f-48f2-8c4c-02ea157aac02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\theora">
+      <UniqueIdentifier>{e5fa7dd8-928c-4924-959c-d095d6708e3a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\analyze.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\apiwrapper.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bitpack.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cpu.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decapiwrapper.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decinfo.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decode.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dequant.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\encapiwrapper.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\encfrag.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\encinfo.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\encode.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\encoder_disabled.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enquant.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fdct.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fragment.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\huffdec.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\huffenc.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\idct.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\info.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\internal.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mathops.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mcenc.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\quant.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rate.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\state.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tokenize.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86_vc\mmxencfrag.c">
+      <Filter>src\x86_vc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86_vc\mmxfdct.c">
+      <Filter>src\x86_vc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86_vc\mmxfrag.c">
+      <Filter>src\x86_vc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86_vc\mmxidct.c">
+      <Filter>src\x86_vc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86_vc\mmxstate.c">
+      <Filter>src\x86_vc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86_vc\x86enc.c">
+      <Filter>src\x86_vc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86_vc\x86state.c">
+      <Filter>src\x86_vc</Filter>
+    </ClCompile>
+    <ClCompile Include="libtheora.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\apiwrapper.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bitpack.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cpu.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dct.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\decint.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dequant.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\encint.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enquant.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\huffdec.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\huffenc.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\huffman.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\internal.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mathops.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modedec.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ocintrin.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\quant.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\x86_vc\mmxfrag.h">
+      <Filter>src\x86_vc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\x86_vc\mmxloop.h">
+      <Filter>src\x86_vc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\x86_vc\x86enc.h">
+      <Filter>src\x86_vc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\x86_vc\x86int.h">
+      <Filter>src\x86_vc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\theora\codec.h">
+      <Filter>src\theora</Filter>
+    </ClInclude>
+    <ClInclude Include="src\theora\theora.h">
+      <Filter>src\theora</Filter>
+    </ClInclude>
+    <ClInclude Include="src\theora\theoradec.h">
+      <Filter>src\theora</Filter>
+    </ClInclude>
+    <ClInclude Include="src\theora\theoraenc.h">
+      <Filter>src\theora</Filter>
+    </ClInclude>
+    <ClInclude Include="library.include.h" />
+    <ClInclude Include="libtheora.h" />
+  </ItemGroup>
+</Project>

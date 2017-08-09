@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{57c0ecda-3c9b-44da-98ac-862186ca19d7}</ProjectGuid>
+    <RootNamespace>libfreeimagerary</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VS_Props\common_params.props" />
+    <Import Project="..\..\VS_Props\arty_release.props" />
+    <Import Project="..\..\VS_Props\libs_paths.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VS_Props\common_params.props" />
+    <Import Project="..\..\VS_Props\arty_release.props" />
+    <Import Project="..\..\VS_Props\libs_paths.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VS_Props\common_params.props" />
+    <Import Project="..\..\VS_Props\arty_debug.props" />
+    <Import Project="..\..\VS_Props\libs_paths.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VS_Props\common_params.props" />
+    <Import Project="..\..\VS_Props\arty_debug.props" />
+    <Import Project="..\..\VS_Props\libs_paths.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;FREEIMAGE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\src;$(ProjectDir)\src\OpenEXR\Half\;$(ProjectDir)\src\OpenEXR\Iex\;$(ProjectDir)\src\OpenEXR\IlmImf\;$(ProjectDir)\src\OpenEXR\Imath\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;FREEIMAGE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\src;$(ProjectDir)\src\OpenEXR\Half\;$(ProjectDir)\src\OpenEXR\Iex\;$(ProjectDir)\src\OpenEXR\IlmImf\;$(ProjectDir)\src\OpenEXR\Imath\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;FREEIMAGE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\src;$(ProjectDir)\src\OpenEXR\Half\;$(ProjectDir)\src\OpenEXR\Iex\;$(ProjectDir)\src\OpenEXR\IlmImf\;$(ProjectDir)\src\OpenEXR\Imath\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;FREEIMAGE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\src;$(ProjectDir)\src\OpenEXR\Half\;$(ProjectDir)\src\OpenEXR\Iex\;$(ProjectDir)\src\OpenEXR\IlmImf\;$(ProjectDir)\src\OpenEXR\Imath\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\FreeImageToolkit\Background.cpp" />
+    <ClCompile Include="src\FreeImageToolkit\BSplineRotate.cpp" />
+    <ClCompile Include="src\FreeImageToolkit\Channels.cpp" />
+    <ClCompile Include="src\FreeImageToolkit\ClassicRotate.cpp" />
+    <ClCompile Include="src\FreeImageToolkit\Colors.cpp" />
+    <ClCompile Include="src\FreeImageToolkit\CopyPaste.cpp" />
+    <ClCompile Include="src\FreeImageToolkit\Display.cpp" />
+    <ClCompile Include="src\FreeImageToolkit\Flip.cpp" />
+    <ClCompile Include="src\FreeImageToolkit\JPEGTransform.cpp" />
+    <ClCompile Include="src\FreeImageToolkit\MultigridPoissonSolver.cpp" />
+    <ClCompile Include="src\FreeImageToolkit\Rescale.cpp" />
+    <ClCompile Include="src\FreeImageToolkit\Resize.cpp" />
+    <ClCompile Include="src\FreeImage\BitmapAccess.cpp" />
+    <ClCompile Include="src\FreeImage\CacheFile.cpp" />
+    <ClCompile Include="src\FreeImage\ColorLookup.cpp" />
+    <ClCompile Include="src\FreeImage\Conversion.cpp" />
+    <ClCompile Include="src\FreeImage\Conversion16_555.cpp" />
+    <ClCompile Include="src\FreeImage\Conversion16_565.cpp" />
+    <ClCompile Include="src\FreeImage\Conversion24.cpp" />
+    <ClCompile Include="src\FreeImage\Conversion32.cpp" />
+    <ClCompile Include="src\FreeImage\Conversion4.cpp" />
+    <ClCompile Include="src\FreeImage\Conversion8.cpp" />
+    <ClCompile Include="src\FreeImage\ConversionFloat.cpp" />
+    <ClCompile Include="src\FreeImage\ConversionRGB16.cpp" />
+    <ClCompile Include="src\FreeImage\ConversionRGBF.cpp" />
+    <ClCompile Include="src\FreeImage\ConversionType.cpp" />
+    <ClCompile Include="src\FreeImage\ConversionUINT16.cpp" />
+    <ClCompile Include="src\FreeImage\FreeImage.cpp" />
+    <ClCompile Include="src\FreeImage\FreeImageC.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\FreeImage\FreeImageIO.cpp" />
+    <ClCompile Include="src\FreeImage\GetType.cpp" />
+    <ClCompile Include="src\FreeImage\Halftoning.cpp" />
+    <ClCompile Include="src\FreeImage\J2KHelper.cpp" />
+    <ClCompile Include="src\FreeImage\MemoryIO.cpp" />
+    <ClCompile Include="src\FreeImage\MNGHelper.cpp" />
+    <ClCompile Include="src\FreeImage\MultiPage.cpp" />
+    <ClCompile Include="src\FreeImage\NNQuantizer.cpp" />
+    <ClCompile Include="src\FreeImage\PixelAccess.cpp" />
+    <ClCompile Include="src\FreeImage\Plugin.cpp" />
+    <ClCompile Include="src\FreeImage\PluginBMP.cpp" />
+    <ClCompile Include="src\FreeImage\PluginCUT.cpp" />
+    <ClCompile Include="src\FreeImage\PluginDDS.cpp" />
+    <ClCompile Include="src\FreeImage\PluginEXR.cpp" />
+    <ClCompile Include="src\FreeImage\PluginG3.cpp" />
+    <ClCompile Include="src\FreeImage\PluginGIF.cpp" />
+    <ClCompile Include="src\FreeImage\PluginHDR.cpp" />
+    <ClCompile Include="src\FreeImage\PluginICO.cpp" />
+    <ClCompile Include="src\FreeImage\PluginIFF.cpp" />
+    <ClCompile Include="src\FreeImage\PluginJ2K.cpp" />
+    <ClCompile Include="src\FreeImage\PluginJNG.cpp" />
+    <ClCompile Include="src\FreeImage\PluginJP2.cpp" />
+    <ClCompile Include="src\FreeImage\PluginJPEG.cpp" />
+    <ClCompile Include="src\FreeImage\PluginKOALA.cpp" />
+    <ClCompile Include="src\FreeImage\PluginMNG.cpp" />
+    <ClCompile Include="src\FreeImage\PluginPCD.cpp" />
+    <ClCompile Include="src\FreeImage\PluginPCX.cpp" />
+    <ClCompile Include="src\FreeImage\PluginPFM.cpp" />
+    <ClCompile Include="src\FreeImage\PluginPICT.cpp" />
+    <ClCompile Include="src\FreeImage\PluginPNG.cpp" />
+    <ClCompile Include="src\FreeImage\PluginPNM.cpp" />
+    <ClCompile Include="src\FreeImage\PluginPSD.cpp" />
+    <ClCompile Include="src\FreeImage\PluginRAS.cpp" />
+    <ClCompile Include="src\FreeImage\PluginRAW.cpp" />
+    <ClCompile Include="src\FreeImage\PluginSGI.cpp" />
+    <ClCompile Include="src\FreeImage\PluginTARGA.cpp" />
+    <ClCompile Include="src\FreeImage\PluginTIFF.cpp" />
+    <ClCompile Include="src\FreeImage\PluginWBMP.cpp" />
+    <ClCompile Include="src\FreeImage\PluginXBM.cpp" />
+    <ClCompile Include="src\FreeImage\PluginXPM.cpp" />
+    <ClCompile Include="src\FreeImage\PSDParser.cpp" />
+    <ClCompile Include="src\FreeImage\TIFFLogLuv.cpp" />
+    <ClCompile Include="src\FreeImage\tmoColorConvert.cpp" />
+    <ClCompile Include="src\FreeImage\tmoDrago03.cpp" />
+    <ClCompile Include="src\FreeImage\tmoFattal02.cpp" />
+    <ClCompile Include="src\FreeImage\tmoReinhard05.cpp" />
+    <ClCompile Include="src\FreeImage\ToneMapping.cpp" />
+    <ClCompile Include="src\FreeImage\WuQuantizer.cpp" />
+    <ClCompile Include="src\FreeImage\ZLibInterface.cpp" />
+    <ClCompile Include="src\Metadata\Exif.cpp" />
+    <ClCompile Include="src\Metadata\FIRational.cpp" />
+    <ClCompile Include="src\Metadata\FreeImageTag.cpp" />
+    <ClCompile Include="src\Metadata\IPTC.cpp" />
+    <ClCompile Include="src\Metadata\TagConversion.cpp" />
+    <ClCompile Include="src\Metadata\TagLib.cpp" />
+    <ClCompile Include="src\Metadata\XTIFF.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libfreeimage.h" />
+    <ClInclude Include="library.include.h" />
+    <ClInclude Include="src\CacheFile.h" />
+    <ClInclude Include="src\FreeImage.h" />
+    <ClInclude Include="src\FreeImageIO.h" />
+    <ClInclude Include="src\FreeImageToolkit\Filters.h" />
+    <ClInclude Include="src\FreeImageToolkit\Resize.h" />
+    <ClInclude Include="src\FreeImage\PSDParser.h" />
+    <ClInclude Include="src\Metadata\FIRational.h" />
+    <ClInclude Include="src\Metadata\FreeImageTag.h" />
+    <ClInclude Include="src\Plugin.h" />
+    <ClInclude Include="src\Quantizers.h" />
+    <ClInclude Include="src\ToneMapping.h" />
+    <ClInclude Include="src\Utilities.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

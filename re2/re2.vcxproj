@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{e93c94ee-749e-4047-86e9-eeff7abd2c77}</ProjectGuid>
+    <RootNamespace>re2rary</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VS_Props\common_params.props" />
+    <Import Project="..\..\VS_Props\arty_release.props" />
+    <Import Project="..\..\VS_Props\libs_paths.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\VS_Props\common_params.props" />
+    <Import Project="..\..\VS_Props\arty_debug.props" />
+    <Import Project="..\..\VS_Props\libs_paths.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="bitstate.cc" />
+    <ClCompile Include="compile.cc" />
+    <ClCompile Include="dfa.cc" />
+    <ClCompile Include="filtered_re2.cc" />
+    <ClCompile Include="mimics_pcre.cc" />
+    <ClCompile Include="nfa.cc" />
+    <ClCompile Include="onepass.cc" />
+    <ClCompile Include="parse.cc" />
+    <ClCompile Include="perl_groups.cc" />
+    <ClCompile Include="prefilter.cc" />
+    <ClCompile Include="prefilter_tree.cc" />
+    <ClCompile Include="prog.cc" />
+    <ClCompile Include="re2.cc" />
+    <ClCompile Include="regexp.cc" />
+    <ClCompile Include="set.cc" />
+    <ClCompile Include="simplify.cc" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stringpiece.cc" />
+    <ClCompile Include="tostring.cc" />
+    <ClCompile Include="unicode_casefold.cc" />
+    <ClCompile Include="unicode_groups.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bitmap256.h" />
+    <ClInclude Include="filtered_re2.h" />
+    <ClInclude Include="prefilter.h" />
+    <ClInclude Include="prefilter_tree.h" />
+    <ClInclude Include="prog.h" />
+    <ClInclude Include="re2.h" />
+    <ClInclude Include="library.include.h" />
+    <ClInclude Include="regexp.h" />
+    <ClInclude Include="set.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="stringpiece.h" />
+    <ClInclude Include="unicode_casefold.h" />
+    <ClInclude Include="unicode_groups.h" />
+    <ClInclude Include="util\benchmark.h" />
+    <ClInclude Include="util\flags.h" />
+    <ClInclude Include="util\logging.h" />
+    <ClInclude Include="util\mix.h" />
+    <ClInclude Include="util\mutex.h" />
+    <ClInclude Include="util\pcre.h" />
+    <ClInclude Include="util\sparse_array.h" />
+    <ClInclude Include="util\sparse_set.h" />
+    <ClInclude Include="util\strutil.h" />
+    <ClInclude Include="util\test.h" />
+    <ClInclude Include="util\utf.h" />
+    <ClInclude Include="util\util.h" />
+    <ClInclude Include="walker-inl.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
