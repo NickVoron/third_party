@@ -45,27 +45,27 @@
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\VS_Props\common_params.props" />
-    <Import Project="..\..\..\..\VS_Props\arty_release.props" />
-    <Import Project="..\..\..\..\VS_Props\libs_paths.props" />
+    <Import Project="..\..\VS_Props\common_params.props" />
+    <Import Project="..\..\VS_Props\arty_release.props" />
+    <Import Project="..\..\VS_Props\libs_paths.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\VS_Props\common_params.props" />
-    <Import Project="..\..\..\..\VS_Props\arty_release.props" />
-    <Import Project="..\..\..\..\VS_Props\libs_paths.props" />
+    <Import Project="..\..\VS_Props\common_params.props" />
+    <Import Project="..\..\VS_Props\arty_release.props" />
+    <Import Project="..\..\VS_Props\libs_paths.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\VS_Props\common_params.props" />
-    <Import Project="..\..\..\..\VS_Props\arty_debug.props" />
-    <Import Project="..\..\..\..\VS_Props\libs_paths.props" />
+    <Import Project="..\..\VS_Props\common_params.props" />
+    <Import Project="..\..\VS_Props\arty_debug.props" />
+    <Import Project="..\..\VS_Props\libs_paths.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\VS_Props\common_params.props" />
-    <Import Project="..\..\..\..\VS_Props\arty_debug.props" />
-    <Import Project="..\..\..\..\VS_Props\libs_paths.props" />
+    <Import Project="..\..\VS_Props\common_params.props" />
+    <Import Project="..\..\VS_Props\arty_debug.props" />
+    <Import Project="..\..\VS_Props\libs_paths.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
