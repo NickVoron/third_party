@@ -123,6 +123,7 @@
       </PrecompiledHeader>
       <CompileAs>CompileAsC</CompileAs>
       <ForcedIncludeFiles>config/platform.h</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>../zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>

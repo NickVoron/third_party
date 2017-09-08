@@ -132,6 +132,7 @@
       <DisableSpecificWarnings>4996;4995;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>../zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>

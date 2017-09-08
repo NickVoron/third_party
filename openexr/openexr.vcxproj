@@ -110,7 +110,7 @@
     <ClCompile>
       <Optimization>Full</Optimization>
       <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)\;$(ProjectDir)\Imath\;$(ProjectDir)\IlmImf\;$(ProjectDir)\Iex\;$(ProjectDir)\IlmThread\;$(ProjectDir)\Half\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../zlib;$(ProjectDir)\;$(ProjectDir)\Imath\;$(ProjectDir)\IlmImf\;$(ProjectDir)\Iex\;$(ProjectDir)\IlmThread\;$(ProjectDir)\Half\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
