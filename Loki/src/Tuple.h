@@ -138,52 +138,44 @@ struct TupleOp
 //
 //
 //
-/*
-template<class List, class T, bool exist> struct TupleMaxOpImplInternalN;
+template<class Op, class List, class T, bool exist> struct TupleMaxOpImplInternalN;
 
-template<class List, class T>
-struct TupleMaxOpImplInternalN<List, T, true>
+template<class Op, class List, class T>
+struct TupleMaxOpImplInternalN<Op, List, T, true>
 {
+	template<class Tuple1, class Tuple2>
 	inline static void exec(Tuple1& t1, const Tuple2& t2)
 	{
 		typedef FieldGetter< Tuple1, Loki::TL::IndexOf<Tuple1::List, T>::value > T1Getter;
 		typedef FieldGetter< Tuple2, Loki::TL::IndexOf<Tuple2::List, T>::value > T2Getter;
 		Op::exec(T1Getter::get(t1), T2Getter::get(t2));
-		Internal<List::Tail, List::Tail::Head, Loki::TL::ExistType<Tuple1::List, List::Tail::Head>::value >::exec(t1, t2);
+		TupleMaxOpImplInternalN<Op, List::Tail, List::Tail::Head, Loki::TL::ExistType<Tuple1::List, List::Tail::Head>::value >::exec(t1, t2);
 	}
 };
 
-template<class List, class T>
-struct TupleMaxOpImplInternalN<List, T, false>
+template<class Op, class List, class T>
+struct TupleMaxOpImplInternalN<Op, List, T, false>
 {
+	template<class Tuple1, class Tuple2>
 	inline static void exec(Tuple1& t1, const Tuple2& t2)
 	{
-		Internal<List::Tail, List::Tail::Head, Loki::TL::ExistType<Tuple1::List, List::Tail::Head>::value >::exec(t1, t2);
+		TupleMaxOpImplInternalN<Op, List::Tail, List::Tail::Head, Loki::TL::ExistType<Tuple1::List, List::Tail::Head>::value >::exec(t1, t2);
 	}
 };
 
-template<class List>
-struct TupleMaxOpImplInternalN<List, Loki::NullType::Head, false>
+template<class Op, class List>
+struct TupleMaxOpImplInternalN<Op, List, Loki::NullType::Head, false>
 {
+	template<class Tuple1, class Tuple2>
 	inline static void exec(Tuple1& t1, const Tuple2& t2) {}
 };
 
+template<class Op, class T, bool exist> struct TupleMaxOpImplInternal1;
 
-template<class Tuple1, class Tuple2, int size>
-struct TupleMaxOpImpl
+template<class Op, class T>
+struct TupleMaxOpImplInternal1<Op, T, true>
 {
-public:
-	inline static void exec(Tuple1& t1, const Tuple2& t2)
-	{
-		TupleMaxOpImplInternalN<Tuple2::List, Tuple1::Head, Loki::TL::ExistType<Tuple2::List, Tuple1::Head>::value >::exec(t1, t2);
-	}
-};
-
-template<class T, bool exist> struct TupleMaxOpImplInternal1;
-
-template<class T>
-struct TupleMaxOpImplInternal1<T, true>
-{
+	template<class Tuple1, class Tuple2>
 	inline static void exec(Tuple1& t1, const Tuple2& t2)
 	{
 		typedef FieldGetter< Tuple1, Loki::TL::IndexOf<Tuple1::List, T>::value > T1Getter;
@@ -192,15 +184,32 @@ struct TupleMaxOpImplInternal1<T, true>
 	}
 };
 
-template<class T> struct TupleMaxOpImplInternal1<T, false> { inline static void copy(Tuple1& t1, const Tuple2& t2) {} };
+template<class Op, class T> 
+struct TupleMaxOpImplInternal1<Op, T, false>
+{ 
+	template<class Tuple1, class Tuple2>
+	inline static void copy(Tuple1& t1, const Tuple2& t2) {} 
+};
 
-template<class Tuple1, class Tuple2>
-struct TupleMaxOpImpl<Tuple1, Tuple2, 1>
+
+template<class Op, class Tuple1, class Tuple2, int size>
+struct TupleMaxOpImpl
+{
+public:
+	template<class Tuple1, class Tuple2>
+	inline static void exec(Tuple1& t1, const Tuple2& t2)
+	{
+		TupleMaxOpImplInternalN<Op, Tuple2::List, Tuple1::Head, Loki::TL::ExistType<Tuple2::List, Tuple1::Head>::value >::exec(t1, t2);
+	}
+};
+
+template<class Op, class Tuple1, class Tuple2>
+struct TupleMaxOpImpl<Op, Tuple1, Tuple2, 1>
 {
 public:
 	inline static void exec(Tuple1& t1, const Tuple2& t2)
 	{
-		Internal<Tuple1::Head, Loki::TL::ExistType<Tuple2::List, Tuple1::Head>::value >::exec(t1, t2);
+		TupleMaxOpImplInternal1<Tuple1::Head, Loki::TL::ExistType<Tuple2::List, Tuple1::Head>::value >::exec(t1, t2);
 	}
 };
 
@@ -213,10 +222,10 @@ struct TupleMaxOp
 {
 	inline static void exec(Tuple1& t1, const Tuple2& t2)
 	{		
-		TupleMaxOpImpl<Tuple1, Tuple2, Tuple1::size>::exec(t1, t2);
+		TupleMaxOpImpl<Op, Tuple1, Tuple2, Tuple1::size>::exec(t1, t2);
 	}
 };
-*/
+
 
 //
 //
@@ -259,11 +268,11 @@ template<class Tuple> struct TupleMul : public TupleOp<Tuple, OpMul>{};
 template<class Tuple> struct TupleDiv : public TupleOp<Tuple, OpDiv>{};
 template<class Tuple> struct TupleSet : public TupleOp<Tuple, OpSet>{};
 
-// template<class Tuple1, class Tuple2> struct TupleMaxAdd : public TupleMaxOp<Tuple1, Tuple2, OpAdd>{};
-// template<class Tuple1, class Tuple2> struct TupleMaxSub : public TupleMaxOp<Tuple1, Tuple2, OpSub>{};
-// template<class Tuple1, class Tuple2> struct TupleMaxMul : public TupleMaxOp<Tuple1, Tuple2, OpMul>{};
-// template<class Tuple1, class Tuple2> struct TupleMaxDiv : public TupleMaxOp<Tuple1, Tuple2, OpDiv>{};
-// template<class Tuple1, class Tuple2> struct TupleMaxSet : public TupleMaxOp<Tuple1, Tuple2, OpSet>{};
+template<class Tuple1, class Tuple2> struct TupleMaxAdd : public TupleMaxOp<Tuple1, Tuple2, OpAdd>{};
+template<class Tuple1, class Tuple2> struct TupleMaxSub : public TupleMaxOp<Tuple1, Tuple2, OpSub>{};
+template<class Tuple1, class Tuple2> struct TupleMaxMul : public TupleMaxOp<Tuple1, Tuple2, OpMul>{};
+template<class Tuple1, class Tuple2> struct TupleMaxDiv : public TupleMaxOp<Tuple1, Tuple2, OpDiv>{};
+template<class Tuple1, class Tuple2> struct TupleMaxSet : public TupleMaxOp<Tuple1, Tuple2, OpSet>{};
 
 template<class Tuple1, class Tuple2, class SelectedList> struct TupleSelectAdd : public TupleSelectOp<Tuple1, Tuple2, SelectedList, OpAdd>{};
 template<class Tuple1, class Tuple2, class SelectedList> struct TupleSelectSub : public TupleSelectOp<Tuple1, Tuple2, SelectedList, OpSub>{};
