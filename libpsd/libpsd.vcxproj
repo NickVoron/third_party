@@ -93,6 +93,7 @@
       <PrecompiledHeader>
       </PrecompiledHeader>
       <ForcedIncludeFiles>config/platform.h;</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>../zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -113,6 +114,7 @@
       </PrecompiledHeader>
       <CompileAs>CompileAsC</CompileAs>
       <ForcedIncludeFiles>config/platform.h;</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>../zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -123,6 +125,7 @@
       </PrecompiledHeader>
       <CompileAs>CompileAsC</CompileAs>
       <ForcedIncludeFiles>config/platform.h</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>../zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>

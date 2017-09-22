@@ -5,9 +5,7 @@
 #include "glew.h"
 #include "wglew.h"
 
-#ifdef DEFINE_SDK_LIB
-#pragma DEFINE_SDK_LIB(glew)
-#endif
+#pragma comment(lib, "glew32s.lib")
 #endif
 
 #if ENABLE_OPENGL_ES

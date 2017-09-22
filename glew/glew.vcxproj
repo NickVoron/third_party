@@ -122,9 +122,6 @@
     <ClInclude Include="library.include.h" />
     <ClInclude Include="wglew.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="glew.c" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
