@@ -83,7 +83,7 @@ forward_DCT (j_compress_ptr cinfo, jpeg_component_info * compptr,
 
     /* Quantize/descale the coefficients, and store into coef_blocks[] */
     { register DCTELEM temp, qval;
-      register int i;
+      int i;
       register JCOEFPTR output_ptr = coef_blocks[bi];
 
       for (i = 0; i < DCTSIZE2; i++) {
@@ -146,7 +146,7 @@ forward_DCT_float (j_compress_ptr cinfo, jpeg_component_info * compptr,
 
     /* Quantize/descale the coefficients, and store into coef_blocks[] */
     { register FAST_FLOAT temp;
-      register int i;
+      int i;
       register JCOEFPTR output_ptr = coef_blocks[bi];
 
       for (i = 0; i < DCTSIZE2; i++) {

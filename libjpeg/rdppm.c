@@ -86,7 +86,7 @@ pbm_getc (FILE * infile)
 /* Read next char, skipping over any comments */
 /* A comment/newline sequence is returned as a newline */
 {
-  register int ch;
+  int ch;
 
   ch = getc(infile);
   if (ch == '#') {
@@ -105,7 +105,7 @@ read_pbm_integer (j_compress_ptr cinfo, FILE * infile)
 /* Note that on a 16-bit-int machine, only values up to 64k can be read. */
 /* This should not be a problem in practice. */
 {
-  register int ch;
+  int ch;
   register unsigned int val;
 
   /* Skip any leading whitespace */
@@ -250,7 +250,7 @@ get_word_gray_row (j_compress_ptr cinfo, cjpeg_source_ptr sinfo)
   ptr = source->pub.buffer[0];
   bufferptr = source->iobuffer;
   for (col = cinfo->image_width; col > 0; col--) {
-    register int temp;
+    int temp;
     temp  = UCH(*bufferptr++) << 8;
     temp |= UCH(*bufferptr++);
     *ptr++ = rescale[temp];
@@ -274,7 +274,7 @@ get_word_rgb_row (j_compress_ptr cinfo, cjpeg_source_ptr sinfo)
   ptr = source->pub.buffer[0];
   bufferptr = source->iobuffer;
   for (col = cinfo->image_width; col > 0; col--) {
-    register int temp;
+    int temp;
     temp  = UCH(*bufferptr++) << 8;
     temp |= UCH(*bufferptr++);
     *ptr++ = rescale[temp];

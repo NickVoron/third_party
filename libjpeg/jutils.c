@@ -189,7 +189,7 @@ jcopy_sample_rows (JSAMPARRAY input_array, int source_row,
 #else
   register JDIMENSION count;
 #endif
-  register int row;
+  int row;
 
   input_array += source_row;
   output_array += dest_row;

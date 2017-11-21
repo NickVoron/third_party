@@ -194,7 +194,7 @@ int_upsample (j_decompress_ptr cinfo, jpeg_component_info * compptr,
   JSAMPARRAY output_data = *output_data_ptr;
   register JSAMPROW inptr, outptr;
   register JSAMPLE invalue;
-  register int h;
+  int h;
   JSAMPROW outend;
   int h_expand, v_expand;
   int inrow, outrow;

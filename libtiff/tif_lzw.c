@@ -862,7 +862,7 @@ LZWEncode(TIFF* tif, uint8* bp, tmsize_t cc, uint16 s)
 	register LZWCodecState *sp = EncoderState(tif);
 	register long fcode;
 	register hash_t *hp;
-	register int h, c;
+	int h, c;
 	hcode_t ent;
 	long disp;
 	long incount, outcount, checkpoint;

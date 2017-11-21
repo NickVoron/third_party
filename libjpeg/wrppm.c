@@ -43,7 +43,7 @@
 #else
 /* The word-per-sample format always puts the MSB first. */
 #define PUTPPMSAMPLE(ptr,v)			\
-	{ register int val_ = v;		\
+	{ int val_ = v;		\
 	  *ptr++ = (char) ((val_ >> 8) & 0xFF);	\
 	  *ptr++ = (char) (val_ & 0xFF);	\
 	}
@@ -131,7 +131,7 @@ put_demapped_rgb (j_decompress_ptr cinfo, djpeg_dest_ptr dinfo,
 {
   ppm_dest_ptr dest = (ppm_dest_ptr) dinfo;
   register char * bufferptr;
-  register int pixval;
+  int pixval;
   register JSAMPROW ptr;
   register JSAMPROW color_map0 = cinfo->colormap[0];
   register JSAMPROW color_map1 = cinfo->colormap[1];

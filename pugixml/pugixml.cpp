@@ -232,7 +232,7 @@ PUGI__NS_BEGIN
 	}
 PUGI__NS_END
 
-// auto_ptr-like object for exception recovery
+// unique_ptr-like object for exception recovery
 PUGI__NS_BEGIN
 	template <typename T> struct auto_deleter
 	{

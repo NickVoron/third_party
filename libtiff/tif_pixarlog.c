@@ -976,7 +976,7 @@ static void
 horizontalDifference16(unsigned short *ip, int n, int stride, 
 	unsigned short *wp, uint16 *From14)
 {
-    register int  r1, g1, b1, a1, r2, g2, b2, a2, mask;
+    int  r1, g1, b1, a1, r2, g2, b2, a2, mask;
 
 /* assumption is unsigned pixel values */
 #undef   CLAMP
@@ -1030,7 +1030,7 @@ static void
 horizontalDifference8(unsigned char *ip, int n, int stride, 
 	unsigned short *wp, uint16 *From8)
 {
-    register int  r1, g1, b1, a1, r2, g2, b2, a2, mask;
+    int  r1, g1, b1, a1, r2, g2, b2, a2, mask;
 
 #undef	 CLAMP
 #define  CLAMP(v) (From8[(v)])

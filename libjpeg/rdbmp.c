@@ -70,7 +70,7 @@ read_byte (bmp_source_ptr sinfo)
 /* Read next byte from BMP file */
 {
   register FILE *infile = sinfo->pub.input_file;
-  register int c;
+  int c;
 
   if ((c = getc(infile)) == EOF)
     ERREXIT(sinfo->cinfo, JERR_INPUT_EOF);
@@ -123,7 +123,7 @@ get_8bit_row (j_compress_ptr cinfo, cjpeg_source_ptr sinfo)
   bmp_source_ptr source = (bmp_source_ptr) sinfo;
   register JSAMPARRAY colormap = source->colormap;
   JSAMPARRAY image_ptr;
-  register int t;
+  int t;
   register JSAMPROW inptr, outptr;
   register JDIMENSION col;
 
@@ -220,7 +220,7 @@ preload_image (j_compress_ptr cinfo, cjpeg_source_ptr sinfo)
 {
   bmp_source_ptr source = (bmp_source_ptr) sinfo;
   register FILE *infile = source->pub.input_file;
-  register int c;
+  int c;
   register JSAMPROW out_ptr;
   JSAMPARRAY image_ptr;
   JDIMENSION row, col;

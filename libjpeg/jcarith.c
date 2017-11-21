@@ -221,7 +221,7 @@ arith_encode (j_compress_ptr cinfo, unsigned char *st, int val)
   register arith_entropy_ptr e = (arith_entropy_ptr) cinfo->entropy;
   register unsigned char nl, nm;
   register INT32 qe, temp;
-  register int sv;
+  int sv;
 
   /* Fetch values from our compact representation of Table D.3(D.2):
    * Qe values and probability estimation state machine
