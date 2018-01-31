@@ -76,7 +76,7 @@ tabinit()
 	needtables = 0;
 }
 
-#define DECLARE_BIT_BUFFER register unsigned long BITbuffer = 0, buffertemp = 0; int bufferbits = 0
+#define DECLARE_BIT_BUFFER unsigned long BITbuffer = 0, buffertemp = 0; int bufferbits = 0
 #define BITS_IN_BUFFER bufferbits
 #define WRITE_N_BITS(x, n) ((BITbuffer |= ( ((x) & ~(-1L<<(n))) << (32-(n)-bufferbits) ) ), bufferbits += (n) )
 #define READ_N_BITS(n) ((buffertemp = (BITbuffer >> (32-(n)))), (BITbuffer <<= (n)), (bufferbits -= (n)), buffertemp)
@@ -96,8 +96,8 @@ ConversionResult ConvertUCS2toUTF7(
 	ConversionResult result = ok;
 	DECLARE_BIT_BUFFER;
 	int shifted = 0, needshift = 0, done = 0;
-	register UCS2 *source = *sourceStart;
-	register char *target = *targetStart;
+	UCS2 *source = *sourceStart;
+	char *target = *targetStart;
 	char *mustshift;
 
 	if (needtables)
@@ -110,7 +110,7 @@ ConversionResult ConvertUCS2toUTF7(
 
 	do
 	{
-		register UCS2 r;
+		UCS2 r;
 
 		if (!(done = (source >= sourceEnd)))
 			r = *source++;
@@ -191,8 +191,8 @@ ConversionResult ConvertUTF7toUCS2(
 	int shifted = 0, first = 0, wroteone = 0, base64EOF, base64value, done;
 	unsigned int c, prevc;
 	unsigned long junk;
-	register char *source = *sourceStart;
-	register UCS2 *target = *targetStart;
+	char *source = *sourceStart;
+	UCS2 *target = *targetStart;
 
 	if (needtables)
 		tabinit();

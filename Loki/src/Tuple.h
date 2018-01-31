@@ -146,10 +146,10 @@ struct TupleMaxOpImplInternalN<Op, List, T, true>
 	template<class Tuple1, class Tuple2>
 	inline static void exec(Tuple1& t1, const Tuple2& t2)
 	{
-		typedef FieldGetter< Tuple1, Loki::TL::IndexOf<Tuple1::List, T>::value > T1Getter;
-		typedef FieldGetter< Tuple2, Loki::TL::IndexOf<Tuple2::List, T>::value > T2Getter;
+		typedef FieldGetter< Tuple1, Loki::TL::IndexOf<typename Tuple1::List, T>::value > T1Getter;
+		typedef FieldGetter< Tuple2, Loki::TL::IndexOf<typename Tuple2::List, T>::value > T2Getter;
 		Op::exec(T1Getter::get(t1), T2Getter::get(t2));
-		TupleMaxOpImplInternalN<Op, List::Tail, List::Tail::Head, Loki::TL::ExistType<Tuple1::List, List::Tail::Head>::value >::exec(t1, t2);
+		TupleMaxOpImplInternalN<Op, typename List::Tail, typename List::Tail::Head, Loki::TL::ExistType<typename Tuple1::List, typename List::Tail::Head>::value >::exec(t1, t2);
 	}
 };
 
@@ -159,7 +159,7 @@ struct TupleMaxOpImplInternalN<Op, List, T, false>
 	template<class Tuple1, class Tuple2>
 	inline static void exec(Tuple1& t1, const Tuple2& t2)
 	{
-		TupleMaxOpImplInternalN<Op, List::Tail, List::Tail::Head, Loki::TL::ExistType<Tuple1::List, List::Tail::Head>::value >::exec(t1, t2);
+		TupleMaxOpImplInternalN<Op, typename List::Tail, typename List::Tail::Head, Loki::TL::ExistType<typename Tuple1::List, typename List::Tail::Head>::value >::exec(t1, t2);
 	}
 };
 
@@ -178,8 +178,8 @@ struct TupleMaxOpImplInternal1<Op, T, true>
 	template<class Tuple1, class Tuple2>
 	inline static void exec(Tuple1& t1, const Tuple2& t2)
 	{
-		typedef FieldGetter< Tuple1, Loki::TL::IndexOf<Tuple1::List, T>::value > T1Getter;
-		typedef FieldGetter< Tuple2, Loki::TL::IndexOf<Tuple2::List, T>::value > T2Getter;
+		typedef FieldGetter< Tuple1, Loki::TL::IndexOf<typename Tuple1::List, T>::value > T1Getter;
+		typedef FieldGetter< Tuple2, Loki::TL::IndexOf<typename Tuple2::List, T>::value > T2Getter;
 		Op::exec(T1Getter::get(t1), T2Getter::get(t2));
 	}
 };
@@ -196,10 +196,10 @@ template<class Op, class Tuple1, class Tuple2, int size>
 struct TupleMaxOpImpl
 {
 public:
-	template<class Tuple1, class Tuple2>
-	inline static void exec(Tuple1& t1, const Tuple2& t2)
+	template<class T1, class T2>
+	inline static void exec(T1& t1, const T2& t2)
 	{
-		TupleMaxOpImplInternalN<Op, Tuple2::List, Tuple1::Head, Loki::TL::ExistType<Tuple2::List, Tuple1::Head>::value >::exec(t1, t2);
+		TupleMaxOpImplInternalN<Op, typename T2::List, typename T1::Head, Loki::TL::ExistType<typename T2::List, typename T1::Head>::value >::exec(t1, t2);
 	}
 };
 
@@ -209,7 +209,7 @@ struct TupleMaxOpImpl<Op, Tuple1, Tuple2, 1>
 public:
 	inline static void exec(Tuple1& t1, const Tuple2& t2)
 	{
-		TupleMaxOpImplInternal1<Tuple1::Head, Loki::TL::ExistType<Tuple2::List, Tuple1::Head>::value >::exec(t1, t2);
+		TupleMaxOpImplInternal1<Op, typename Tuple1::Head, Loki::TL::ExistType<typename Tuple2::List, typename Tuple1::Head>::value >::exec(t1, t2);
 	}
 };
 

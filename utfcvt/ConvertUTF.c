@@ -61,7 +61,7 @@ static const UTF32 halfMask = 0x3FFUL;
 
 /* --------------------------------------------------------------------- */
 
-ConversionResult __cdecl ConvertUTF32toUTF16(
+ConversionResult ConvertUTF32toUTF16(
 	const UTF32** sourceStart, const UTF32* sourceEnd,
 	UTF16** targetStart, UTF16* targetEnd, ConversionFlags flags) {
 	ConversionResult result = conversionOK;
@@ -115,7 +115,7 @@ ConversionResult __cdecl ConvertUTF32toUTF16(
 
 /* --------------------------------------------------------------------- */
 
-ConversionResult __cdecl ConvertUTF16toUTF32(
+ConversionResult ConvertUTF16toUTF32(
 	const UTF16** sourceStart, const UTF16* sourceEnd,
 	UTF32** targetStart, UTF32* targetEnd, ConversionFlags flags) {
 	ConversionResult result = conversionOK;
@@ -222,7 +222,7 @@ static const UTF8 firstByteMark[7] = { 0x00, 0x00, 0xC0, 0xE0, 0xF0, 0xF8, 0xFC 
 
  /* --------------------------------------------------------------------- */
 
-ConversionResult __cdecl ConvertUTF16toUTF8(
+ConversionResult ConvertUTF16toUTF8(
 	const UTF16** sourceStart, const UTF16* sourceEnd,
 	UTF8** targetStart, UTF8* targetEnd, ConversionFlags flags) {
 	ConversionResult result = conversionOK;
@@ -356,7 +356,7 @@ Boolean isLegalUTF8Sequence(const UTF8 *source, const UTF8 *sourceEnd) {
 
 /* --------------------------------------------------------------------- */
 
-ConversionResult __cdecl ConvertUTF8toUTF16(const UTF8** sourceStart, const UTF8* sourceEnd, UTF16** targetStart, UTF16* targetEnd, ConversionFlags flags)
+ConversionResult ConvertUTF8toUTF16(const UTF8** sourceStart, const UTF8* sourceEnd, UTF16** targetStart, UTF16* targetEnd, ConversionFlags flags)
 {
 	ConversionResult result = conversionOK;
 	const UTF8* source = *sourceStart;
@@ -433,7 +433,7 @@ ConversionResult __cdecl ConvertUTF8toUTF16(const UTF8** sourceStart, const UTF8
 
 /* --------------------------------------------------------------------- */
 
-ConversionResult __cdecl ConvertUTF32toUTF8(
+ConversionResult ConvertUTF32toUTF8(
 	const UTF32** sourceStart, const UTF32* sourceEnd,
 	UTF8** targetStart, UTF8* targetEnd, ConversionFlags flags) 
 {
@@ -496,7 +496,7 @@ ConversionResult __cdecl ConvertUTF32toUTF8(
 
 /* --------------------------------------------------------------------- */
 
-ConversionResult __cdecl ConvertUTF8toUTF32(
+ConversionResult ConvertUTF8toUTF32(
 	const UTF8** sourceStart, const UTF8* sourceEnd,
 	UTF32** targetStart, UTF32* targetEnd, ConversionFlags flags) {
 	ConversionResult result = conversionOK;

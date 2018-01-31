@@ -1,9 +1,13 @@
 #pragma once
 
 #if ENABLE_OPENGL
+#ifndef GLEW_STATIC
 #define GLEW_STATIC
+#endif
 #include "glew.h"
+#if defined(USE_WINDOWS)
 #include "wglew.h"
+#endif
 
 #pragma comment(lib, "glew32s.lib")
 #endif

@@ -3,7 +3,6 @@ file(GLOB allSourceFiles
     "*.hpp"
     "*.hxx"
     "*.cpp"
-    "*.c"
     "*.cxx"
 )
 
@@ -12,4 +11,4 @@ string(REPLACE " " "_" LibraryId ${LibraryId})
 add_compile_options("-FIstdafx.h")
 add_library(${LibraryId} ${allSourceFiles})
 set_target_precompiled_header(${LibraryId} stdafx.h stdafx.cpp)
-set_target_properties(${LibraryId} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "$ENV{SharedTecINT}/libs")
+set_target_properties(${LibraryId} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${SharedTecINT})

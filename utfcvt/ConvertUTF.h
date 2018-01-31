@@ -119,12 +119,12 @@ typedef enum
 	lenientConversion
 } ConversionFlags;
 
-	ConversionResult __cdecl ConvertUTF8toUTF16	(const UTF8**  srcS, const UTF8*  srcE, UTF16** trgS, UTF16* trgE, ConversionFlags flags);
-	ConversionResult __cdecl ConvertUTF16toUTF8	(const UTF16** srcS, const UTF16* srcE, UTF8**  trgS, UTF8*  trgE, ConversionFlags flags);
-	ConversionResult __cdecl ConvertUTF8toUTF32	(const UTF8**  srcS, const UTF8*  srcE, UTF32** trgS, UTF32* trgE, ConversionFlags flags);
-	ConversionResult __cdecl ConvertUTF32toUTF8	(const UTF32** srcS, const UTF32* srcE, UTF8**  trgS, UTF8*  trgE, ConversionFlags flags);
-	ConversionResult __cdecl ConvertUTF16toUTF32 (const UTF16** srcS, const UTF16* srcE, UTF32** trgS, UTF32* trgE, ConversionFlags flags);
-	ConversionResult __cdecl ConvertUTF32toUTF16 (const UTF32** srcS, const UTF32* srcE, UTF16** trgS, UTF16* trgE, ConversionFlags flags);
+	ConversionResult ConvertUTF8toUTF16	(const UTF8**  srcS, const UTF8*  srcE, UTF16** trgS, UTF16* trgE, ConversionFlags flags);
+	ConversionResult ConvertUTF16toUTF8	(const UTF16** srcS, const UTF16* srcE, UTF8**  trgS, UTF8*  trgE, ConversionFlags flags);
+	ConversionResult ConvertUTF8toUTF32	(const UTF8**  srcS, const UTF8*  srcE, UTF32** trgS, UTF32* trgE, ConversionFlags flags);
+	ConversionResult ConvertUTF32toUTF8	(const UTF32** srcS, const UTF32* srcE, UTF8**  trgS, UTF8*  trgE, ConversionFlags flags);
+	ConversionResult ConvertUTF16toUTF32 (const UTF16** srcS, const UTF16* srcE, UTF32** trgS, UTF32* trgE, ConversionFlags flags);
+	ConversionResult ConvertUTF32toUTF16 (const UTF32** srcS, const UTF32* srcE, UTF16** trgS, UTF16* trgE, ConversionFlags flags);
 
 	Boolean isLegalUTF8Sequence(const UTF8 *source, const UTF8 *sourceEnd);
 #if __cplusplus

@@ -1,3 +1,4 @@
+#include <assert.h>
 
 #include "NvTriStripObjects.h"
 #include "NvTriStrip.h"

@@ -137,7 +137,6 @@
     <ClCompile Include="inftrees.c" />
     <ClCompile Include="trees.c" />
     <ClCompile Include="uncompr.c" />
-    <ClCompile Include="zlib.cpp" />
     <ClCompile Include="zutil.c" />
   </ItemGroup>
   <ItemGroup>
