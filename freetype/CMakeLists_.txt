@@ -1,0 +1,69 @@
+file(GLOB_RECURSE allSourceFiles
+    "*.h"
+    "*.hpp"
+    "*.hxx"
+    "*.cpp"
+    "*.c"
+    "*.cxx"
+)
+
+include_directories("./")
+add_compile_options("-FIft2build.h")
+
+list(REMOVE_ITEM allSourceFiles 
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftmac.c
+	${CMAKE_CURRENT_SOURCE_DIR}/pfr/pfr.c
+	${CMAKE_CURRENT_SOURCE_DIR}/psaux/psaux.c
+	${CMAKE_CURRENT_SOURCE_DIR}/pcf/pcf.c
+	${CMAKE_CURRENT_SOURCE_DIR}/otvalid/otvalid.c
+	${CMAKE_CURRENT_SOURCE_DIR}/raster/raster.c
+	${CMAKE_CURRENT_SOURCE_DIR}/type1/type1.c
+	${CMAKE_CURRENT_SOURCE_DIR}/pshinter/pshinter.c
+	${CMAKE_CURRENT_SOURCE_DIR}/cff/cff.c
+	${CMAKE_CURRENT_SOURCE_DIR}/truetype/truetype.c
+	${CMAKE_CURRENT_SOURCE_DIR}/bdf/bdf.c
+	${CMAKE_CURRENT_SOURCE_DIR}/cache/ftcache.c
+	${CMAKE_CURRENT_SOURCE_DIR}/sfnt/sfnt.c
+	${CMAKE_CURRENT_SOURCE_DIR}/winfonts/winfnt.c
+	${CMAKE_CURRENT_SOURCE_DIR}/psnames/psnames.c
+	${CMAKE_CURRENT_SOURCE_DIR}/cid/type1cid.c
+	${CMAKE_CURRENT_SOURCE_DIR}/autofit/autofit.c
+	${CMAKE_CURRENT_SOURCE_DIR}/gxvalid/gxvalid.c
+	${CMAKE_CURRENT_SOURCE_DIR}/smooth/smooth.c
+	${CMAKE_CURRENT_SOURCE_DIR}/gzip/infblock.c
+	${CMAKE_CURRENT_SOURCE_DIR}/gzip/infcodes.c
+	${CMAKE_CURRENT_SOURCE_DIR}/gzip/inflate.c
+	${CMAKE_CURRENT_SOURCE_DIR}/gzip/infutil.c
+	${CMAKE_CURRENT_SOURCE_DIR}/tools/ftrandom/ftrandom.c
+	${CMAKE_CURRENT_SOURCE_DIR}/type42/type42.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftapi.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftbase.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftbbox.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftbdf.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftbitmap.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftcid.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftdebug.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftfstype.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftgasp.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftglyph.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftgxval.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftinit.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftlcdfil.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftmm.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftobjs.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftotval.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftpatent.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftpfr.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftpic.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftstroke.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftsynth.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftsystem.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/fttype1.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftwinfnt.c
+	${CMAKE_CURRENT_SOURCE_DIR}/base/ftxf86.c
+	)
+
+get_filename_component(LibraryId ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+string(REPLACE " " "_" LibraryId ${LibraryId})
+add_library(${LibraryId} ${allSourceFiles})
+set_target_properties(${LibraryId} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${SharedTecINT})

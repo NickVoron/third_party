@@ -117,7 +117,6 @@
     <ClCompile Include="latlon.cpp" />
     <ClCompile Include="libnoise.cpp" />
     <ClCompile Include="noisegen.cpp" />
-    <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="module\abs.h">
@@ -237,7 +236,6 @@
     <ClInclude Include="misc.h" />
     <ClInclude Include="noise.h" />
     <ClInclude Include="noisegen.h" />
-    <ClInclude Include="stdafx.h" />
     <ClInclude Include="vectortable.h" />
   </ItemGroup>
 </Project>

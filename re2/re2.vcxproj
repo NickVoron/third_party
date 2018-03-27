@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{e93c94ee-749e-4047-86e9-eeff7abd2c77}</ProjectGuid>
     <RootNamespace>re2rary</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -126,12 +126,6 @@
     <ClCompile Include="regexp.cc" />
     <ClCompile Include="set.cc" />
     <ClCompile Include="simplify.cc" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="stringpiece.cc" />
     <ClCompile Include="tostring.cc" />
     <ClCompile Include="unicode_casefold.cc" />
@@ -147,7 +141,6 @@
     <ClInclude Include="library.include.h" />
     <ClInclude Include="regexp.h" />
     <ClInclude Include="set.h" />
-    <ClInclude Include="stdafx.h" />
     <ClInclude Include="stringpiece.h" />
     <ClInclude Include="unicode_casefold.h" />
     <ClInclude Include="unicode_groups.h" />
@@ -164,6 +157,11 @@
     <ClInclude Include="util\utf.h" />
     <ClInclude Include="util\util.h" />
     <ClInclude Include="walker-inl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Stable\Sources\Libraries\pch\pch.vcxproj">
+      <Project>{1ea1239a-1af6-11e8-b99b-6045cba5931a}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

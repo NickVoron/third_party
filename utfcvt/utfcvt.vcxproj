@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3533E4C2-746D-4F3B-8DFC-F8F5C511DD7E}</ProjectGuid>
     <RootNamespace>utfcvt</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -145,6 +145,11 @@
     <ClInclude Include="ConvertUTF.h" />
     <ClInclude Include="CVTUTF7.H" />
     <ClInclude Include="library.include.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Stable\Sources\Libraries\profiler\profiler.vcxproj">
+      <Project>{fb14c65f-0912-4568-961a-2b53637bacc8}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

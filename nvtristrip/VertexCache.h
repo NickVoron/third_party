@@ -1,8 +1,4 @@
-  
-#ifndef VERTEX_CACHE_H
-
-#define VERTEX_CACHE_H
-
+#pragma once
 #include <string.h>
 
 class VertexCache
@@ -78,4 +74,3 @@ private:
 
 };
 
-#endif

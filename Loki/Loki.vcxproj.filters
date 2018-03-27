@@ -59,9 +59,5 @@
     </ClInclude>
     <ClInclude Include="library.include.h" />
     <ClInclude Include="Loki.h" />
-    <ClInclude Include="stdafx.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
 </Project>

@@ -17,6 +17,8 @@
 
 #include <stdio.h>
 #include "scales.h"
+#if 0
+
 int main(){
   int i;
   double rate;
@@ -62,3 +64,4 @@ int main(){
   return(0);
 }
 
+#endif
