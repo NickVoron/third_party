@@ -5,3 +5,4 @@ _obj-lib-etc
 _obj-libs-etc
 __pycache__
 *.user
+fbxsdk/
